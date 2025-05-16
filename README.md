@@ -1,3 +1,3 @@
-# LOVMM-Language-Conditioned Open-Vocabulary Mobile Manipulation with Pretrained Models
+# LOVMM
 This is the code for the paper "Language-Conditioned Open-Vocabulary Mobile Manipulation with Pretrained Models".
 
