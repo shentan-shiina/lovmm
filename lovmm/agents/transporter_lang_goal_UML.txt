@@ -1,0 +1,63 @@
+@startuml
+class TwoStreamClipLingUNetTransporterAgent {
+    _build_model()
+    attn_forward()
+    attn_training_step()
+    trans_forward()
+    transport_training_step()
+    act()
+        attention
+    transport
+    __init__()
+}
+class TwoStreamClipFilmLingUNetLatTransporterAgent {
+    _build_model()
+        attention
+    transport
+    __init__()
+}
+class TwoStreamClipLingUNetLatTransporterAgent {
+    _build_model()
+        attention
+    transport
+    __init__()
+}
+class TwoStreamRN50BertLingUNetTransporterAgent {
+    _build_model()
+        attention
+    transport
+    __init__()
+}
+class TwoStreamUntrainedRN50BertLingUNetTransporterAgent {
+    _build_model()
+        attention
+    transport
+    __init__()
+}
+class TwoStreamRN50BertLingUNetLatTransporterAgent {
+    _build_model()
+        attention
+    transport
+    __init__()
+}
+class OriginalTransporterLangFusionAgent {
+    _build_model()
+        attention
+    transport
+    __init__()
+}
+class ClipLingUNetTransporterAgent {
+    _build_model()
+        attention
+    transport
+    __init__()
+}
+TransporterAgent <|-- TwoStreamClipLingUNetTransporterAgent
+TwoStreamClipLingUNetTransporterAgent <|-- TwoStreamClipFilmLingUNetLatTransporterAgent
+TwoStreamClipLingUNetTransporterAgent <|-- TwoStreamClipLingUNetLatTransporterAgent
+TwoStreamClipLingUNetTransporterAgent <|-- TwoStreamRN50BertLingUNetTransporterAgent
+TwoStreamClipLingUNetTransporterAgent <|-- TwoStreamUntrainedRN50BertLingUNetTransporterAgent
+TwoStreamClipLingUNetTransporterAgent <|-- TwoStreamRN50BertLingUNetLatTransporterAgent
+TwoStreamClipLingUNetTransporterAgent <|-- OriginalTransporterLangFusionAgent
+TwoStreamClipLingUNetTransporterAgent <|-- ClipLingUNetTransporterAgent
+@enduml

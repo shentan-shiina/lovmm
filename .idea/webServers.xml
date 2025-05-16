@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3518857c-e444-4956-ad90-a139c0464989" name="dzhou.ltd">
+        <fileTransfer rootFolder="/home/users/tanshen" accessType="SFTP" host="dzhou.ltd" port="7005" sshConfigId="0c618611-f40c-42f6-9040-6d036e6448ed" sshConfig="tanshen@dzhou.ltd:7005 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

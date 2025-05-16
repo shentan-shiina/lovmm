@@ -1,0 +1,56 @@
+# Training
+
+defaults:
+  - config
+
+hydra:
+  run:
+    dir: /home
+
+dataset:
+  type: 'single' # 'single' or 'multi'
+  images: True
+  cache: True # load episodes to memory instead of reading from disk
+  augment:
+    theta_sigma: 60 # rotation sigma in degrees; N(mu = 0, sigma = theta_sigma).
+
+train:
+  # folders
+  exp_folder: /home/exps
+  train_dir: /home/exps/${train.task}-${train.agent}-n${train.n_demos}-train
+  data_dir: /home/data
+
+  # task configs
+  task: assembling-kits-seq-seen-colors
+  agent: lovmm
+  n_demos: 100
+  n_steps: 601000 # use 601000 for multi-task models
+
+  # hyper params
+  n_rotations: 36
+  batchnorm: False # important: False because batch_size=1
+  lr: 1e-4
+
+  attn_stream_fusion_type: 'add'
+  trans_stream_fusion_type: 'conv'
+  lang_fusion_type: 'mult'
+
+  # script configs
+  gpu: -1 # -1 for all
+  log: False # log metrics and stats to wandb
+  n_val: 100
+  val_repeats: 1
+  save_steps: [6000,10000,50000,100000,150000,200000,201000,300000,400000,500000,600000]
+  load_from_last_ckpt: True
+
+wandb:
+  run_name: 'cliport0'
+  logger:
+    entity: lovmm
+    project: lovmm
+    tags: []
+    group: train
+    offline: False
+  saver:
+    upload: False
+    monitor: 'val_loss'

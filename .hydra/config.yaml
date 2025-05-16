@@ -1,0 +1,51 @@
+dataset:
+  type: multi
+  images: true
+  cache: true
+  augment:
+    theta_sigma: 60
+train:
+  exp_folder: /media/tan/TanSSD/cliport_data/1Habitat/habitat_cliport_exps/LOVMM_models
+  train_dir: /media/tan/TanSSD/cliport_data/1Habitat/habitat_cliport_exps/LOVMM_models/${train.task}-${train.agent}-n${train.n_demos}-train
+  data_dir: /media/tan/TanSSD/cliport_data/1Habitat/1OVMM_new_tasks
+  task: multi-custom-seen-lovmm
+  agent: cliport6d
+  n_demos: 1
+  n_steps: 6000
+  n_rotations: 36
+  batchnorm: false
+  lr: 0.0001
+  attn_stream_fusion_type: add
+  trans_stream_fusion_type: conv
+  lang_fusion_type: mult
+  gpu:
+  - 0
+  gpu_device: cuda:0
+  log: false
+  n_val: 100
+  val_repeats: 1
+  save_steps:
+  - 100000
+  - 150000
+  - 200000
+  - 201000
+  - 285000
+  - 300000
+  - 400000
+  - 500000
+  - 600000
+  load_from_last_ckpt: true
+wandb:
+  run_name: cliport0
+  logger:
+    entity: lovmm
+    project: lovmm
+    tags: []
+    group: train
+    offline: false
+  saver:
+    upload: false
+    monitor: val_loss
+root_dir: /home/tan/1Files/1Project/lovmm-master-train_habitat
+tag: default
+debug: false

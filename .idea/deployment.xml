@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="dzhou.ltd">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/cliport_train/cliport-master-train_habitat" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="tanshen@dzhou.ltd:7005 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/users/tanshen/cliport_train/cliport-master-train_habitat" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
