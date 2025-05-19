@@ -1,0 +1,6 @@
+# Shared Config
+
+root_dir: /home/tan/1Files/1Project/lovmm-master-train # set this ENV variable if you didn't `python setup.py develop`
+
+tag: default
+debug: False
